@@ -94,4 +94,5 @@ function initScrollAnimations() {
 console.log(`
 %c Designed & Developed by Muhammad Iqbal Saputra 
 %c https://github.com/muhammadiqbalsaputra
-`, 'font-weight: bold; font-size: 14px; color: #111827;', 'color: #6b7280;');
+%c New Projects: Rempah Tour & Jagamata Added
+`, 'font-weight: bold; font-size: 14px; color: #111827;', 'color: #6b7280;', 'color: #059669;');
