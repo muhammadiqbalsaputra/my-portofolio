@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammad Iqbal Saputra — Portfolio</title>
+    <title>Contact - Muhammad Iqbal Saputra</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -82,13 +82,13 @@
 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-12">
-                    <a href="index.html" class="text-sm font-medium text-black transition-colors">Home</a>
+                    <a href="index.html"
+                        class="text-sm font-medium text-gray-500 hover:text-black transition-colors">Home</a>
                     <a href="about.html"
                         class="text-sm font-medium text-gray-500 hover:text-black transition-colors">About</a>
                     <a href="projects.html"
                         class="text-sm font-medium text-gray-500 hover:text-black transition-colors">Work</a>
-                    <a href="contact.html"
-                        class="text-sm font-medium text-gray-500 hover:text-black transition-colors">Contact</a>
+                    <a href="contact.html" class="text-sm font-medium text-black transition-colors">Contact</a>
                 </div>
 
                 <!-- Mobile Menu Button -->
@@ -116,38 +116,37 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="min-h-screen flex items-center pt-20 flex-grow">
-        <div class="max-w-6xl mx-auto px-6 lg:px-8 w-full">
-            <div class="max-w-3xl animate-fade-in-up">
-                <p class="text-gray-500 font-medium mb-6 uppercase tracking-wider text-sm">Hello, I'm Iqbal</p>
-                <h1 class="text-5xl md:text-7xl font-semibold tracking-tight leading-tight mb-8">
-                    Network Specialist & <br> <span class="text-gray-400">Web Developer.</span>
-                </h1>
-                <p class="text-xl text-gray-600 max-w-2xl leading-relaxed mb-12 font-light">
-                    I build robust digital infrastructure and craft minimal, functional web experiences. Focusing on
-                    performance, security, and clean code.
-                </p>
-                <div class="flex gap-6">
-                    <a href="projects.html"
-                        class="group relative px-6 py-3 bg-gray-900 text-white rounded-full overflow-hidden transition-all hover:bg-gray-800">
-                        <span class="relative z-10 font-medium">View Projects</span>
-                    </a>
-                    <a href="contact.html"
-                        class="px-6 py-3 text-gray-900 border border-gray-200 rounded-full hover:border-gray-900 transition-colors font-medium">
-                        Contact Me
-                    </a>
-                </div>
+    <!-- Contact Section -->
+    <section id="contact" class="pt-32 pb-20 bg-gray-900 text-white flex-grow flex items-center">
+        <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center w-full">
+            <h2 class="text-4xl md:text-5xl font-semibold mb-8">Let's work together.</h2>
+            <p class="text-xl text-gray-400 mb-12 font-light">
+                Have a project in mind or just want to discuss networking? I'm currently available for freelance work.
+            </p>
+            <a href="mailto:muhammad.iqbal.sap@gmail.com"
+                class="inline-block px-10 py-5 bg-white text-gray-900 rounded-full font-medium hover:bg-gray-100 transition-colors">
+                Say Hello
+            </a>
+
+            <div class="mt-20 flex justify-center space-x-12">
+                <a href="https://github.com/muhammadiqbalsaputra"
+                    class="text-gray-400 hover:text-white transition-colors">
+                    <i class="fab fa-github text-2xl"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/miqbalptr/"
+                    class="text-gray-400 hover:text-white transition-colors">
+                    <i class="fab fa-linkedin text-2xl"></i>
+                </a>
+                <a href="https://www.instagram.com/balee.sa" class="text-gray-400 hover:text-white transition-colors">
+                    <i class="fab fa-instagram text-2xl"></i>
+                </a>
             </div>
+
+            <footer class="mt-20 pt-10 border-t border-gray-800 text-gray-500 text-sm">
+                &copy; 2024 Muhammad Iqbal Saputra. All rights reserved.
+            </footer>
         </div>
     </section>
-
-    <!-- Footer -->
-    <footer class="py-10 border-t border-gray-200 bg-white text-center text-gray-500 text-sm">
-        <div class="max-w-6xl mx-auto px-6 lg:px-8">
-            &copy; 2024 Muhammad Iqbal Saputra. All rights reserved.
-        </div>
-    </footer>
 
     <script src="script.js"></script>
 </body>
