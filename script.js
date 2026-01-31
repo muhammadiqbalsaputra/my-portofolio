@@ -13,13 +13,29 @@ document.addEventListener('DOMContentLoaded', () => {
 function initMobileMenu() {
     const btn = document.getElementById('mobile-menu-btn');
     const menu = document.getElementById('mobile-menu');
-    const closeBtn = document.getElementById('close-menu-btn');
     const links = menu.querySelectorAll('a');
 
-    function toggleMenu(show) {
-        if (show) {
+    // Icons
+    const hamburgerIcon = `
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+    `;
+    const closeIcon = `
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+    `;
+
+    function toggleMenu() {
+        const isHidden = menu.classList.contains('hidden');
+
+        if (isHidden) {
+            // Open Menu
             menu.classList.remove('hidden');
-            // Small delay to allow display:flex to apply before opacity transition
+            btn.innerHTML = closeIcon;
+
+            // Small delay for transition
             setTimeout(() => {
                 menu.classList.remove('opacity-0');
                 menu.classList.add('flex', 'opacity-100');
@@ -28,18 +44,19 @@ function initMobileMenu() {
                 links.forEach((link, index) => {
                     setTimeout(() => {
                         link.classList.remove('opacity-0', 'translate-y-4');
-                    }, 100 + (index * 100)); // Delay start + stagger
+                    }, 100 + (index * 100));
                 });
             }, 10);
-            document.body.style.overflow = 'hidden'; // Prevent scrolling
+            document.body.style.overflow = 'hidden';
         } else {
-            // Hide links first
+            // Close Menu
             links.forEach(link => {
                 link.classList.add('opacity-0', 'translate-y-4');
             });
 
             menu.classList.remove('opacity-100');
             menu.classList.add('opacity-0');
+            btn.innerHTML = hamburgerIcon;
 
             setTimeout(() => {
                 menu.classList.remove('flex');
@@ -49,12 +66,22 @@ function initMobileMenu() {
         }
     }
 
-    btn.addEventListener('click', () => toggleMenu(true));
-    closeBtn.addEventListener('click', () => toggleMenu(false));
+    btn.addEventListener('click', toggleMenu);
 
     // Close on link click
     links.forEach(link => {
-        link.addEventListener('click', () => toggleMenu(false));
+        link.addEventListener('click', () => {
+            // Close explicitly
+            links.forEach(l => l.classList.add('opacity-0', 'translate-y-4'));
+            menu.classList.remove('opacity-100');
+            menu.classList.add('opacity-0');
+            btn.innerHTML = hamburgerIcon;
+            setTimeout(() => {
+                menu.classList.remove('flex');
+                menu.classList.add('hidden');
+            }, 300);
+            document.body.style.overflow = '';
+        });
     });
 }
 
