@@ -76,7 +76,8 @@
     <nav class="fixed top-0 w-full glass-nav z-50 border-b border-gray-100 transition-all duration-300">
         <div class="max-w-6xl mx-auto px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <a href="index.html" class="text-xl font-semibold tracking-tight hover:text-gray-600 transition-colors">
+                <a href="index.html"
+                    class="text-xl font-semibold tracking-tight hover:text-gray-600 transition-colors z-50 relative">
                     Iqbal<span class="text-gray-400">.</span>
                 </a>
 
@@ -92,8 +93,8 @@
                 </div>
 
                 <!-- Mobile Menu Button -->
-                <div class="md:hidden">
-                    <button id="mobile-menu-btn" class="text-gray-900 focus:outline-none">
+                <div class="md:hidden z-50">
+                    <button id="mobile-menu-btn" class="text-gray-900 focus:outline-none p-2">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
                                 d="M4 6h16M4 12h16M4 18h16"></path>
@@ -105,42 +106,48 @@
 
         <!-- Mobile Menu Overlay -->
         <div id="mobile-menu"
-            class="fixed inset-0 bg-white z-40 hidden flex-col justify-center items-center space-y-8 opacity-0 transition-opacity duration-300">
-            <button id="close-menu-btn" class="absolute top-6 right-6 text-2xl text-gray-500 hover:text-black">
-                <i class="fas fa-times"></i>
+            class="fixed inset-0 bg-white/90 backdrop-blur-xl z-40 hidden flex-col justify-center items-center space-y-8 opacity-0 transition-all duration-300">
+            <button id="close-menu-btn"
+                class="absolute top-6 right-6 text-gray-500 hover:text-black p-4 focus:outline-none">
+                <i class="fas fa-times text-2xl"></i>
             </button>
-            <a href="index.html" class="text-3xl font-light hover:text-gray-600 transition-colors">Home</a>
-            <a href="about.html" class="text-3xl font-light hover:text-gray-600 transition-colors">About</a>
-            <a href="projects.html" class="text-3xl font-light hover:text-gray-600 transition-colors">Work</a>
-            <a href="contact.html" class="text-3xl font-light hover:text-gray-600 transition-colors">Contact</a>
+            <a href="index.html"
+                class="text-4xl font-light text-gray-900 hover:text-gray-600 transition-colors transform translate-y-4 opacity-0 transition-all duration-500 delay-100">Home</a>
+            <a href="about.html"
+                class="text-4xl font-light text-gray-900 hover:text-gray-600 transition-colors transform translate-y-4 opacity-0 transition-all duration-500 delay-200">About</a>
+            <a href="projects.html"
+                class="text-4xl font-light text-gray-900 hover:text-gray-600 transition-colors transform translate-y-4 opacity-0 transition-all duration-500 delay-300">Work</a>
+            <a href="contact.html"
+                class="text-4xl font-light text-gray-900 hover:text-gray-600 transition-colors transform translate-y-4 opacity-0 transition-all duration-500 delay-400">Contact</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="min-h-screen flex items-center pt-20 flex-grow">
+    <section id="home" class="min-h-screen flex items-center pt-24 pb-12 flex-grow">
         <div class="max-w-6xl mx-auto px-6 lg:px-8 w-full">
             <div class="flex flex-col md:flex-row items-center justify-between gap-12">
-                <div class="max-w-3xl animate-fade-in-up flex-1 order-2 md:order-1">
-                    <p class="text-gray-500 font-medium mb-6 uppercase tracking-wider text-sm">Hello, I'm Iqbal</p>
-                    <h1 class="text-5xl md:text-7xl font-semibold tracking-tight leading-tight mb-8">
+                <div class="max-w-3xl animate-fade-in-up flex-1 order-1 md:order-1">
+                    <p class="text-gray-500 font-medium mb-6 uppercase tracking-wider text-xs md:text-sm">Hello, I'm
+                        Iqbal</p>
+                    <h1 class="text-4xl md:text-7xl font-semibold tracking-tight leading-tight mb-8">
                         Network Specialist & <br> <span class="text-gray-400">Web Developer.</span>
                     </h1>
-                    <p class="text-xl text-gray-600 max-w-2xl leading-relaxed mb-12 font-light">
+                    <p class="text-lg md:text-xl text-gray-600 max-w-2xl leading-relaxed mb-10 font-light">
                         I build robust digital infrastructure and craft minimal, functional web experiences. Focusing on
                         performance, security, and clean code.
                     </p>
-                    <div class="flex gap-6">
+                    <div class="flex flex-col sm:flex-row gap-4 sm:gap-6">
                         <a href="projects.html"
-                            class="group relative px-6 py-3 bg-gray-900 text-white rounded-full overflow-hidden transition-all hover:bg-gray-800">
+                            class="group relative px-8 py-4 bg-gray-900 text-white rounded-full overflow-hidden transition-all hover:bg-gray-800 text-center">
                             <span class="relative z-10 font-medium">View Projects</span>
                         </a>
                         <a href="contact.html"
-                            class="px-6 py-3 text-gray-900 border border-gray-200 rounded-full hover:border-gray-900 transition-colors font-medium">
+                            class="px-8 py-4 text-gray-900 border border-gray-200 rounded-full hover:border-gray-900 transition-colors font-medium text-center">
                             Contact Me
                         </a>
                     </div>
                 </div>
-                <div class="flex-1 max-w-md w-full animate-fade-in-up order-1 md:order-2"
+                <div class="flex-1 max-w-xs md:max-w-md w-full animate-fade-in-up order-2 md:order-2"
                     style="animation-delay: 0.2s;">
                     <div
                         class="aspect-square rounded-full overflow-hidden border-4 border-gray-100 shadow-2xl relative">

@@ -23,11 +23,24 @@ function initMobileMenu() {
             setTimeout(() => {
                 menu.classList.remove('opacity-0');
                 menu.classList.add('flex', 'opacity-100');
+
+                // Staggered animation for links
+                links.forEach((link, index) => {
+                    setTimeout(() => {
+                        link.classList.remove('opacity-0', 'translate-y-4');
+                    }, 100 + (index * 100)); // Delay start + stagger
+                });
             }, 10);
             document.body.style.overflow = 'hidden'; // Prevent scrolling
         } else {
+            // Hide links first
+            links.forEach(link => {
+                link.classList.add('opacity-0', 'translate-y-4');
+            });
+
             menu.classList.remove('opacity-100');
             menu.classList.add('opacity-0');
+
             setTimeout(() => {
                 menu.classList.remove('flex');
                 menu.classList.add('hidden');
