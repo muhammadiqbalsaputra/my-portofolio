@@ -89,35 +89,63 @@ export default function projects() {
                     </div>
                 </div>
 
-                <!-- Project 4 -->
-                <div class="group grid grid-cols-1 md:grid-cols-2 gap-10 items-center md:flex-row-reverse">
-                    <div class="md:order-2 bg-gray-100 rounded-2xl overflow-hidden aspect-[4/3] relative">
-                        <div class="absolute inset-0 flex items-center justify-center text-gray-300">
-                            <i class="fas fa-eye text-6xl opacity-50"></i>
-                        </div>
-                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-500">
-                        </div>
+
+            <!-- Project 4 -->
+            <div class="group grid grid-cols-1 md:grid-cols-2 gap-10 items-center md:flex-row-reverse">
+                <div class="md:order-2 bg-gray-100 rounded-2xl overflow-hidden aspect-[4/3] relative">
+                    <div class="absolute inset-0 flex items-center justify-center text-gray-300">
+                        <i class="fas fa-eye text-6xl opacity-50"></i>
                     </div>
-                    <div class="md:order-1 space-y-6">
-                        <h3 class="text-3xl font-medium text-gray-900">Jagamata</h3>
-                        <p class="text-gray-600 leading-relaxed font-light">
-                            A smart surveillance solution for community safety. Features AI-powered object detection,
-                            real-time alerts, and cloud storage integration.
-                        </p>
-                        <div class="flex gap-4 text-sm text-gray-500">
-                            <span>Flutter</span>
-                            <span>&bull;</span>
-                            <span>Firebase</span>
-                            <span>&bull;</span>
-                            <span>TensorFlow</span>
-                        </div>
-                        <a href="#"
-                            class="inline-block text-black border-b border-black pb-1 hover:text-gray-600 hover:border-gray-600 transition-all">View
-                            Project</a>
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-500">
                     </div>
                 </div>
-
+                <div class="md:order-1 space-y-6">
+                    <h3 class="text-3xl font-medium text-gray-900">Jagamata</h3>
+                    <p class="text-gray-600 leading-relaxed font-light">
+                        A smart surveillance solution for community safety. Features AI-powered object detection,
+                        real-time alerts, and cloud storage integration.
+                    </p>
+                    <div class="flex gap-4 text-sm text-gray-500">
+                        <span>Flutter</span>
+                        <span>&bull;</span>
+                        <span>Firebase</span>
+                        <span>&bull;</span>
+                        <span>TensorFlow</span>
+                    </div>
+                    <a href="#"
+                        class="inline-block text-black border-b border-black pb-1 hover:text-gray-600 hover:border-gray-600 transition-all">View
+                        Project</a>
+                </div>
             </div>
+
+            <!-- Project 5 -->
+            <div class="group grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                <div class="bg-gray-100 rounded-2xl overflow-hidden aspect-[4/3] relative">
+                    <div class="absolute inset-0 flex items-center justify-center text-gray-300">
+                        <i class="fas fa-shopping-bag text-6xl opacity-50"></i>
+                    </div>
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-500">
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <h3 class="text-3xl font-medium text-gray-900">Seventensports</h3>
+                    <p class="text-gray-600 leading-relaxed font-light">
+                        A dynamic e-commerce platform for high-quality sports equipment. Built for speed and seamless user experience with modern reactive components.
+                    </p>
+                    <div class="flex gap-4 text-sm text-gray-500">
+                        <span>Laravel</span>
+                        <span>&bull;</span>
+                        <span>Livewire</span>
+                        <span>&bull;</span>
+                        <span>MySQL</span>
+                    </div>
+                    <a href="#"
+                        class="inline-block text-black border-b border-black pb-1 hover:text-gray-600 hover:border-gray-600 transition-all">View
+                        Project</a>
+                </div>
+            </div>
+
+        </div>
         </div>
     </section>
     `;
