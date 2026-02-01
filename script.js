@@ -1,35 +1,31 @@
-/**
- * Muhammad Iqbal Saputra - Portfolio Website
- * Minimalist & Performance Focused
- */
+import { Router } from './router.js';
+import home from './pages/home.js';
+import about from './pages/about.js';
+import projects from './pages/projects.js';
+import contact from './pages/contact.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-    // initMobileMenu() is handled by navbar.js
-    initSmoothScroll();
-    initScrollAnimations();
+    // Defines the routes
+    const routes = {
+        '/': { view: home, afterMount: initScrollAnimations },
+        '/index.html': { view: home, afterMount: initScrollAnimations }, // Fallback for some servers
+        '/about': { view: about, afterMount: initScrollAnimations },
+        '/projects': { view: projects, afterMount: initScrollAnimations },
+        '/contact': { view: contact, afterMount: initScrollAnimations },
+    };
+
+    // Initialize Router
+    const router = new Router(routes);
+
+    // Initial load
+    router.handleLocation();
+
+    // initMobileMenu is in navbar.js, which is loaded separately and runs on DOMContentLoaded
+    // Since we are adding navbar via JS, we might need to be careful about timing, 
+    // but navbar.js listens for DOMContentLoaded and injects navbar immediate.y
 });
 
-
-// Smooth Scrolling for Anchor Links
-function initSmoothScroll() {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
-
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    });
-}
-
-// Simple Scroll Reveal Animation
+// Simple Scroll Reveal Animation (Re-used for each page load)
 function initScrollAnimations() {
     const observerOptions = {
         threshold: 0.1,
@@ -47,7 +43,8 @@ function initScrollAnimations() {
     }, observerOptions);
 
     // Apply to sections and major elements
-    const elementsToAnimate = document.querySelectorAll('section > div, .group');
+    // We select elements that might be in the new view
+    const elementsToAnimate = document.querySelectorAll('section > div, .animate-fade-in-up, .group');
 
     elementsToAnimate.forEach(el => {
         el.classList.add('transition-all', 'duration-1000', 'ease-out', 'opacity-0', 'translate-y-10');

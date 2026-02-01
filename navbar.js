@@ -11,16 +11,16 @@ function injectNavbar() {
     <nav class="fixed top-0 w-full glass-nav z-50 border-b border-gray-100 transition-all duration-300">
         <div class="max-w-6xl mx-auto px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <a href="index.html" class="text-xl font-semibold tracking-tight hover:text-gray-600 transition-colors z-50 relative">
+                <a href="/" data-link class="text-xl font-semibold tracking-tight hover:text-gray-600 transition-colors z-50 relative">
                     Iqbal<span class="text-gray-400">.</span>
                 </a>
 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-12">
-                    <a href="index.html" class="nav-link text-sm font-medium text-gray-500 hover:text-black transition-colors" data-page="index.html">Home</a>
-                    <a href="about.html" class="nav-link text-sm font-medium text-gray-500 hover:text-black transition-colors" data-page="about.html">About</a>
-                    <a href="projects.html" class="nav-link text-sm font-medium text-gray-500 hover:text-black transition-colors" data-page="projects.html">Work</a>
-                    <a href="contact.html" class="nav-link text-sm font-medium text-gray-500 hover:text-black transition-colors" data-page="contact.html">Contact</a>
+                    <a href="/" class="nav-link text-sm font-medium text-gray-500 hover:text-black transition-colors" data-link data-page="/">Home</a>
+                    <a href="/about" class="nav-link text-sm font-medium text-gray-500 hover:text-black transition-colors" data-link data-page="/about">About</a>
+                    <a href="/projects" class="nav-link text-sm font-medium text-gray-500 hover:text-black transition-colors" data-link data-page="/projects">Work</a>
+                    <a href="/contact" class="nav-link text-sm font-medium text-gray-500 hover:text-black transition-colors" data-link data-page="/contact">Contact</a>
                 </div>
 
                 <!-- Mobile Menu Button -->
@@ -36,35 +36,22 @@ function injectNavbar() {
 
         <!-- Mobile Menu Overlay -->
         <div id="mobile-menu" class="fixed inset-0 bg-white z-40 hidden flex-col justify-center items-center space-y-8 opacity-0 transition-opacity duration-300">
-            <a href="index.html" class="text-4xl font-light text-gray-900 hover:text-gray-600 transition-colors transform translate-y-4 opacity-0 transition-all duration-500 delay-100">Home</a>
-            <a href="about.html" class="text-4xl font-light text-gray-900 hover:text-gray-600 transition-colors transform translate-y-4 opacity-0 transition-all duration-500 delay-200">About</a>
-            <a href="projects.html" class="text-4xl font-light text-gray-900 hover:text-gray-600 transition-colors transform translate-y-4 opacity-0 transition-all duration-500 delay-300">Work</a>
-            <a href="contact.html" class="text-4xl font-light text-gray-900 hover:text-gray-600 transition-colors transform translate-y-4 opacity-0 transition-all duration-500 delay-400">Contact</a>
+            <a href="/" data-link class="text-4xl font-light text-gray-900 hover:text-gray-600 transition-colors transform translate-y-4 opacity-0 transition-all duration-500 delay-100">Home</a>
+            <a href="/about" data-link class="text-4xl font-light text-gray-900 hover:text-gray-600 transition-colors transform translate-y-4 opacity-0 transition-all duration-500 delay-200">About</a>
+            <a href="/projects" data-link class="text-4xl font-light text-gray-900 hover:text-gray-600 transition-colors transform translate-y-4 opacity-0 transition-all duration-500 delay-300">Work</a>
+            <a href="/contact" data-link class="text-4xl font-light text-gray-900 hover:text-gray-600 transition-colors transform translate-y-4 opacity-0 transition-all duration-500 delay-400">Contact</a>
         </div>
     </nav>
     `;
 
     navbarPlaceholder.innerHTML = navbarHTML;
 
-    setActiveLink();
+    // setActiveLink(); // Handled by router.js
     initMobileMenu();
 }
 
-function setActiveLink() {
-    const path = window.location.pathname;
-    const page = path.split("/").pop() || 'index.html'; // Default to index.html if empty
+// setActiveLink function removed as it is handled by the Router class
 
-    const links = document.querySelectorAll('.nav-link');
-    links.forEach(link => {
-        if (link.getAttribute('data-page') === page) {
-            link.classList.remove('text-gray-500');
-            link.classList.add('text-black');
-        } else {
-            link.classList.remove('text-black');
-            link.classList.add('text-gray-500');
-        }
-    });
-}
 
 function initMobileMenu() {
     const btn = document.getElementById('mobile-menu-btn');
