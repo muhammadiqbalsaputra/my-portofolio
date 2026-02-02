@@ -1,7 +1,7 @@
 import { Router } from './router.js';
 import home from './pages/home.js';
 import about from './pages/about.js';
-import projects from './pages/projects.js';
+// Projects is fetched from HTML
 import contact from './pages/contact.js';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -10,7 +10,17 @@ document.addEventListener('DOMContentLoaded', () => {
         '/': { view: home, afterMount: initScrollAnimations },
         '/index.html': { view: home, afterMount: initScrollAnimations }, // Fallback for some servers
         '/about': { view: about, afterMount: initScrollAnimations },
-        '/projects': { view: projects, afterMount: initScrollAnimations },
+        '/projects': {
+            view: async () => {
+                const response = await fetch('./projects.html');
+                const html = await response.text();
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+                const content = doc.querySelector('#projects');
+                return content ? content.outerHTML : '<h1>Error loading content</h1>';
+            },
+            afterMount: initScrollAnimations
+        },
         '/contact': { view: contact, afterMount: initScrollAnimations },
     };
 

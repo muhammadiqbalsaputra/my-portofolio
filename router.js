@@ -28,7 +28,7 @@ export class Router {
 
         // Render content
         if (typeof route.view === 'function') {
-            const html = route.view();
+            const html = await route.view();
             this.rootElem.innerHTML = html;
 
             // Re-initialize animations and scripts if needed

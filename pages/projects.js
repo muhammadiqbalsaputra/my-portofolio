@@ -4,7 +4,7 @@ export default function projects() {
         <div class="max-w-6xl mx-auto px-6 lg:px-8">
             <h2 class="text-sm font-semibold text-gray-900 uppercase tracking-widest mb-10 md:mb-16">Selected Work</h2>
 
-            <div class="grid grid-cols-1 gap-12 md:gap-20">
+            <div class="grid grid-cols-1 gap-8 md:gap-20">
                 <!-- Project 1 -->
                 <div class="group grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
                     <div class="bg-gray-100 rounded-2xl overflow-hidden aspect-[4/3] relative">

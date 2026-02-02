@@ -2,7 +2,7 @@ export default function about() {
     return `
     <section id="about" class="pt-24 md:pt-32 pb-12 md:pb-20 bg-gray-50 flex-grow animate-fade-in-up">
         <div class="max-w-6xl mx-auto px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-start">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-start">
                 <div>
                     <h2 class="text-sm font-semibold text-gray-900 uppercase tracking-widest mb-12">About Me</h2>
                     <h3 class="text-3xl md:text-4xl font-medium leading-tight mb-8">

@@ -7,7 +7,7 @@ export default function contact() {
                 Have a project in mind or just want to discuss networking? I'm currently available for freelance work.
             </p>
             <a href="mailto:muhammad.iqbal.sap@gmail.com"
-                class="inline-block px-10 py-5 bg-white text-gray-900 rounded-full font-medium hover:bg-gray-100 transition-colors">
+                class="inline-block px-8 py-4 md:px-10 md:py-5 bg-white text-gray-900 rounded-full font-medium hover:bg-gray-100 transition-colors">
                 Say Hello
             </a>
 

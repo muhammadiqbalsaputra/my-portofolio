@@ -35,11 +35,11 @@ function injectNavbar() {
         </div>
 
         <!-- Mobile Menu Overlay -->
-        <div id="mobile-menu" class="fixed inset-0 bg-white z-40 hidden flex-col justify-center items-center space-y-8 opacity-0 transition-opacity duration-300">
-            <a href="/" data-link class="text-4xl font-light text-gray-900 hover:text-gray-600 transition-colors transform translate-y-4 opacity-0 transition-all duration-500 delay-100">Home</a>
-            <a href="/about" data-link class="text-4xl font-light text-gray-900 hover:text-gray-600 transition-colors transform translate-y-4 opacity-0 transition-all duration-500 delay-200">About</a>
-            <a href="/projects" data-link class="text-4xl font-light text-gray-900 hover:text-gray-600 transition-colors transform translate-y-4 opacity-0 transition-all duration-500 delay-300">Work</a>
-            <a href="/contact" data-link class="text-4xl font-light text-gray-900 hover:text-gray-600 transition-colors transform translate-y-4 opacity-0 transition-all duration-500 delay-400">Contact</a>
+        <div id="mobile-menu" class="fixed inset-0 bg-white/90 backdrop-blur-xl z-40 hidden flex-col justify-center items-center space-y-8 opacity-0 transition-opacity duration-300">
+            <a href="/" data-link class="text-3xl font-medium text-gray-900 hover:text-gray-600 transition-colors transform translate-y-4 opacity-0 transition-all duration-500 delay-100">Home</a>
+            <a href="/about" data-link class="text-3xl font-medium text-gray-900 hover:text-gray-600 transition-colors transform translate-y-4 opacity-0 transition-all duration-500 delay-200">About</a>
+            <a href="/projects" data-link class="text-3xl font-medium text-gray-900 hover:text-gray-600 transition-colors transform translate-y-4 opacity-0 transition-all duration-500 delay-300">Work</a>
+            <a href="/contact" data-link class="text-3xl font-medium text-gray-900 hover:text-gray-600 transition-colors transform translate-y-4 opacity-0 transition-all duration-500 delay-400">Contact</a>
         </div>
     </nav>
     `;
