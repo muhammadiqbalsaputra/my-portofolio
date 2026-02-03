@@ -7,8 +7,8 @@ export default function home() {
                 <div class="max-w-3xl flex-1 order-1 md:order-1">
                     <p class="text-gray-500 font-medium mb-6 uppercase tracking-wider text-xs md:text-sm">Hello, I'm
                         Iqbal</p>
-                    <h1 class="text-4xl md:text-7xl font-semibold tracking-tight leading-tight mb-8">
-                        Network Specialist & <br> <span class="text-gray-400">Web Developer.</span>
+                    <h1 class="text-4xl md:text-7xl font-semibold tracking-tight leading-tight mb-8 min-h-[160px] md:min-h-[auto]">
+                        <span id="hero-title-1"></span> <br> <span id="hero-title-2" class="text-gray-400"></span>
                     </h1>
                     <p class="text-lg md:text-xl text-gray-600 max-w-2xl leading-relaxed mb-10 font-light">
                         I build robust digital infrastructure and craft minimal, functional web experiences. Focusing on

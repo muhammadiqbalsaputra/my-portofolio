@@ -7,8 +7,8 @@ import contact from './pages/contact.js';
 document.addEventListener('DOMContentLoaded', () => {
     // Defines the routes
     const routes = {
-        '/': { view: home, afterMount: initScrollAnimations },
-        '/index.html': { view: home, afterMount: initScrollAnimations }, // Fallback for some servers
+        '/': { view: home, afterMount: initHome },
+        '/index.html': { view: home, afterMount: initHome }, // Fallback for some servers
         '/about': { view: about, afterMount: initScrollAnimations },
         '/projects': {
             view: async () => {
@@ -29,11 +29,54 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initial load
     router.handleLocation();
-
-    // initMobileMenu is in navbar.js, which is loaded separately and runs on DOMContentLoaded
-    // Since we are adding navbar via JS, we might need to be careful about timing, 
-    // but navbar.js listens for DOMContentLoaded and injects navbar immediate.y
 });
+
+// Home Page Specific Initializer
+function initHome() {
+    initScrollAnimations();
+    runTypingEffect();
+}
+
+// Typing Effect for Home Page
+function runTypingEffect() {
+    const el1 = document.getElementById('hero-title-1');
+    const el2 = document.getElementById('hero-title-2');
+
+    if (!el1 || !el2) return;
+
+    const text1 = "Network Specialist &";
+    const text2 = "Web Developer.";
+    const speed = 70; // Typing speed in ms
+
+    // Clear content
+    el1.textContent = "";
+    el2.textContent = "";
+
+    let i = 0;
+
+    function typeLine1() {
+        if (i < text1.length) {
+            el1.textContent += text1.charAt(i);
+            i++;
+            setTimeout(typeLine1, speed);
+        } else {
+            // Move to next line after a short pause
+            i = 0;
+            setTimeout(typeLine2, 300);
+        }
+    }
+
+    function typeLine2() {
+        if (i < text2.length) {
+            el2.textContent += text2.charAt(i);
+            i++;
+            setTimeout(typeLine2, speed);
+        }
+    }
+
+    // Start typing after a short delay
+    setTimeout(typeLine1, 500);
+}
 
 // Simple Scroll Reveal Animation (Re-used for each page load)
 function initScrollAnimations() {
