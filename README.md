@@ -12,13 +12,7 @@ This is a personal portfolio website designed to showcase my projects, skills, a
 - **JavaScript**: Vanilla JS for logic, including a custom client-side router.
 - **Font Awesome**: Iconography.
 - **Google Fonts**: Typography (Inter).
-
-## ✨ Features
-- **Responsive Design**: Optimized for both desktop and mobile devices.
-- **Custom Routing**: Single Page Application (SPA) feel without heavy frameworks.
-- **Glassmorphism UI**: Modern, translucent navigational elements.
-- **Dynamic Content Loading**: Pages are rendered dynamically via JavaScript.
-
+  
 ## 🚀 Getting Started
 
 ### Prerequisites
