@@ -46,7 +46,7 @@ function runTypingEffect() {
 
     const text1 = "Network Specialist &";
     const text2 = "Web Developer.";
-    const speed = 70; // Typing speed in ms
+    const speed = 30; // Typing speed in ms
 
     // Clear content
     el1.textContent = "";
