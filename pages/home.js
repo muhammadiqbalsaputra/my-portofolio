@@ -27,7 +27,7 @@ export default function home() {
                 </div>
                 <div class="flex-1 max-w-xs md:max-w-md w-full order-2 md:order-2">
                     <div
-                        class="aspect-square rounded-full overflow-hidden border-4 border-gray-100 shadow-2xl relative">
+                        class="aspect-square rounded-full overflow-hidden border-4 border-gray-100 shadow-2xl relative transition-transform duration-500 hover:scale-110">
                         <img src="images/Untitled design (24).png" alt="Muhammad Iqbal Saputra"
                             class="w-full h-full object-cover">
                     </div>
